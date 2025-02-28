@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 sentence-transformers==2.2.2
 langchain
 flask
@@ -8,4 +9,16 @@ langchain-pinecone
 langchain_community
 langchain_openai
 langchain_experimental
+=======
+sentence-transformers==2.2.2
+langchain
+flask
+pypdf
+python-dotenv
+pinecone[grpc]
+langchain-pinecone
+langchain_community
+langchain_openai
+langchain_experimental
+>>>>>>> f6ddde3fa15176967eb6186cb7e257abc68f75e7
 -e . 

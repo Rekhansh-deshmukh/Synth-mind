@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -43,3 +44,50 @@ button {
     border-radius: 50%; /* Make the button round */
     cursor: pointer; /* Change cursor on hover */
 }
+=======
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-in; /* Apply fade-in animation */
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center; /* Center align content */
+}
+
+#chatbox {
+    animation: fadeIn 1s ease-in; /* Apply fade-in animation */
+    border-radius: 10px; /* Add rounded corners */
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    padding: 10px;
+    margin: 10px auto; /* Center the chatbox */
+    width: 80%; /* Set width for better alignment */
+}
+
+#user-input {
+    animation: fadeIn 1s ease-in; /* Apply fade-in animation */
+    border-radius: 10px; /* Add rounded corners */
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #444; /* Add border */
+    padding: 10px; /* Add padding for better appearance */
+    width: 70%; /* Set width for better alignment */
+    margin: 10px auto; /* Center the input field */
+}
+
+button {
+    padding: 10px 20px; /* Add padding for better appearance */
+    background-color: #ffffff; /* Change background to white */
+    color: #000000; /* Change text color to black */
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Make the button round */
+    cursor: pointer; /* Change cursor on hover */
+}
+>>>>>>> f6ddde3fa15176967eb6186cb7e257abc68f75e7
