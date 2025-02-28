@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthe_mind</title>
+
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        #chatbox div {
+            text-align: left; ;
+        }
+
+
+        body { font-family: Arial, sans-serif; }
+        #chatbox { width: 100%; height: 400px; border: 1px solid #ccc; overflow-y: scroll; padding: 10px; }
+        #user-input { width: 100%; }
+    </style>
+</head>
+<body>
+    <h1>Synthe_mind</h1>
+    <div id="chatbox"></div>
+    <input type="text" id="user-input" placeholder="Type your message here..." onkeypress="if(event.key === 'Enter') sendMessage()" />
+
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('user-input');
+            const message = input.value;
+            const chatbox = document.getElementById('chatbox');
+
+            chatbox.innerHTML += '<div>User: ' + message + '</div>';
+            input.value = '';
+
+            // Here you would send the message to the server and get a response
+            fetch('/ask', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: message })
+            }).then(response => response.json())
+            .then(data => {
+                chatbox.innerHTML += '<div>Bot: ' + data.response + '</div>';
+
+            }).catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
