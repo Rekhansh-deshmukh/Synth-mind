@@ -58,7 +58,6 @@ retriver = docsearch.as_retriever(search_type="similarity", search_kwarg={"k": 3
 print("Retrieval chain created")
 llm = OllamaLLM(model="deepseek-coder-v2")  # Initialize the model once at the global scope
 
-
 print("LLM model loaded")
 
 prompt = ChatPromptTemplate.from_messages(
@@ -68,16 +67,12 @@ prompt = ChatPromptTemplate.from_messages(
 )
 
 @app.route("/")
-def index():
-    return render_template("chat.html")
 
 @app.route('/ask', methods=['POST'])
-async def ask():  # Change to asynchronous function
+def ask():
     user_input = request.json.get('message')
     # Here you would call the Ollama model to get a response
-    response = await llm.invoke(user_input)  # Call the Ollama model to get a response asynchronously
-
-
+    response = llm.invoke(user_input)  # Call the Ollama model to get a response
 
 
     return jsonify({'response': response})
