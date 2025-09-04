@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from flask import Flask, render_template, jsonify, request
 from src.helper import download_hugging_face_embeddings, text_split, load_pdf_file
 from langchain_pinecone import PineconeVectorStore
