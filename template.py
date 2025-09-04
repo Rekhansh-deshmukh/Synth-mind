@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import os
 from pathlib import Path
 import logging 
@@ -60,5 +60,5 @@ for filepath in list_of_files:
             pass
             logging.info(f"Creating file: {filepath}")
     else:
->>>>>>> f6ddde3fa15176967eb6186cb7e257abc68f75e7
+
         logging.info(f"File already exists: {filepath}")    
