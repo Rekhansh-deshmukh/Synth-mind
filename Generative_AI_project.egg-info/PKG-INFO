@@ -1,7 +1,7 @@
 Metadata-Version: 2.2
 Name: Generative-AI-project
 Version: 0.0.0
-Author: Aditya,Fateh,Aryan,Khushi,Rekhansh
+Author: Rekhansh
 Author-email: forcoding70@gmail.com
 License-File: LICENSE
 Requires-Dist: sentence-transformers==2.2.2
@@ -17,3 +17,4 @@ Requires-Dist: langchain_experimental
 Dynamic: author
 Dynamic: author-email
 Dynamic: requires-dist
+
