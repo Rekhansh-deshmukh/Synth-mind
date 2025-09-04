@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from setuptools import find_packages, setup
 
 setup(
@@ -21,7 +21,7 @@ setup(
     ]
 
 )
-=======
+
 from setuptools import find_packages, setup
 
 setup(
@@ -44,4 +44,3 @@ setup(
     ]
 
 )
->>>>>>> f6ddde3fa15176967eb6186cb7e257abc68f75e7
