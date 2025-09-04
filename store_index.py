@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from src.helper import load_pdf_file, text_split, download_hugging_face_embeddings
 from pinecone.grpc import PineconeGRPC as Pinecone
 from pinecone import ServerlessSpec
@@ -30,7 +30,7 @@ pc.create_index(
 )
 
 docsearch = PineconeVectorStore.from_documents(documents=text_chunks, embedding=embedding, index_name=index_name)
-=======
+
 from src.helper import load_pdf_file, text_split, download_hugging_face_embeddings
 from pinecone.grpc import PineconeGRPC as Pinecone
 from pinecone import ServerlessSpec
@@ -47,8 +47,6 @@ extracted_data = load_pdf_file(data="data/")
 text_chunks = text_split(extracted_data)
 embeddings = download_hugging_face_embeddings()
 
-pc = Pinecone(api_key="pcsk_LQzrX_Lk3V5nRLHVYgmxJHrmsBqazdhPMYmzhsYRdf1p1eTcnsmC4LU8BVVgRzyaPreNr")
-
 index_name = "synthmind"
 
 pc.create_index(
@@ -62,4 +60,3 @@ pc.create_index(
 )
 
 docsearch = PineconeVectorStore.from_documents(documents=text_chunks, embedding=embedding, index_name=index_name)
->>>>>>> f6ddde3fa15176967eb6186cb7e257abc68f75e7
