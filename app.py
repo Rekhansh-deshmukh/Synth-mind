@@ -85,7 +85,6 @@ async def ask():  # Change to asynchronous function
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=3342, debug=True)
-=======
 from flask import Flask, render_template, jsonify, request
 from src.helper import download_hugging_face_embeddings, text_split, load_pdf_file
 from langchain_pinecone import PineconeVectorStore
@@ -172,4 +171,3 @@ async def ask():  # Change to asynchronous function
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=3342, debug=True)
->>>>>>> f6ddde3fa15176967eb6186cb7e257abc68f75e7
