@@ -15,8 +15,6 @@ extracted_data = load_pdf_file(data="data/")
 text_chunks = text_split(extracted_data)
 embeddings = download_hugging_face_embeddings()
 
-pc = Pinecone(api_key="pcsk_LQzrX_Lk3V5nRLHVYgmxJHrmsBqazdhPMYmzhsYRdf1p1eTcnsmC4LU8BVVgRzyaPreNr")
-
 index_name = "synthmind"
 
 pc.create_index(
